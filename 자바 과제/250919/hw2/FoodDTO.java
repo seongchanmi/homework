@@ -5,6 +5,10 @@ public class FoodDTO {
 	private int num;
 	private String name;
 	private int amount;
+	/* 🎀
+	* 자바에 날짜형을 취급하는 자료형이 있다는 거 아시나요?! Date, LocalDate 등등
+	* 나중에는 이 자료형도 활용해 보는 것도 좋을 것 같습니다~
+	*/
 	private String date;
 	
 	public FoodDTO() {}

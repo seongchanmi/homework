@@ -7,9 +7,10 @@ public class FoodController {
 
 	Scanner sc = new Scanner(System.in);
 	private FoodService service;
+
 	public FoodController(FoodService service) {
 		this.service = service;
-		}
+	}
 	
 	public void run () {
 		while(true) {
@@ -36,7 +37,7 @@ public class FoodController {
 				
 			case 2:
 				List<FoodDTO> food = service.getAllFood();
-				for(FoodDTO dto : food ) {
+				for(FoodDTO dto : food) {
 					System.out.println(dto);
 					}
 				break;
