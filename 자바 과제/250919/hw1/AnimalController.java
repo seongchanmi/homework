@@ -56,3 +56,5 @@ public class AnimalController {
 	}
 
 }
+
+@@ 멍멍 냥냥 왈왈 찬미짱 힘내시와요 그럼 이만,,, 
