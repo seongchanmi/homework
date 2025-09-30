@@ -1,0 +1,70 @@
+SQL> create table student(
+  2  id number primary key,
+  3  name varchar(20)
+  4  ,
+  5  age number,
+  6  year number
+  7  );
+
+테이블이 생성되었습니다.
+
+SQL> insert into student (id, name, age, year) values (1, '제임스', 21, 3);
+
+1 개의 행이 만들어졌습니다.
+
+SQL> insert into student (id, name, age, year) values (2, '마틴', 20, 2);
+
+1 개의 행이 만들어졌습니다.
+
+SQL> insert into student (id, name, age, year) values (3, '김주훈', 20, 2);
+
+1 개의 행이 만들어졌습니다.
+
+SQL> insert into student (id, name, age, year) values (4, '엄성현', 19, 1);
+
+1 개의 행이 만들어졌습니다.
+
+SQL> insert into student (id, name, age, year) values (5, '안건호', 19, 1);
+
+1 개의 행이 만들어졌습니다.
+
+SQL> select * from student where age >=21;
+
+        ID NAME                                            AGE       YEAR
+---------- ---------------------------------------- ---------- ----------
+         1 제임스                                           21          3
+
+SQL> select * from student order by name asc;
+
+        ID NAME                                            AGE       YEAR
+---------- ---------------------------------------- ---------- ----------
+         3 김주훈                                           20          2
+         2 마틴                                             20          2
+         5 안건호                                           19          1
+         4 엄성현                                           19          1
+         1 제임스                                           21          3
+
+SQL> select * from student order by age desc;
+
+        ID NAME                                            AGE       YEAR
+---------- ---------------------------------------- ---------- ----------
+         1 제임스                                           21          3
+         2 마틴                                             20          2
+         3 김주훈                                           20          2
+         4 엄성현                                           19          1
+         5 안건호                                           19          1
+
+SQL> select sum(age) from student;
+
+  SUM(AGE)
+----------
+        99
+
+SQL> select * from student where age = (select min(age) from student);
+
+        ID NAME                                            AGE       YEAR
+---------- ---------------------------------------- ---------- ----------
+         4 엄성현                                           19          1
+         5 안건호                                           19          1
+
+SQL>
