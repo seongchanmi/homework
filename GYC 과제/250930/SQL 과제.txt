@@ -1,6 +1,6 @@
 SQL> create table student(
   2  id number primary key,
-  3  name varchar(20)
+  3  name varchar2(20)
   4  ,
   5  age number,
   6  year number
