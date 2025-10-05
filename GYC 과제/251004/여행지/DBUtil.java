@@ -5,11 +5,11 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 
 public class DBUtil {
-	
+
 	private static final String URL = "jdbc:oracle:thin:@localhost:1521:xe";
 	private static final String USER = "c##osaka";
 	private static final String PW = "1234";
-	
+
 	public static Connection getConnection() {
 		try {
 			return DriverManager.getConnection(URL, USER, PW);
@@ -18,9 +18,5 @@ public class DBUtil {
 		}
 		return null;
 	}
-
-	
-	
-	
 
 }

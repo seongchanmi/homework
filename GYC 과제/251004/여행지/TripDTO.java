@@ -1,14 +1,13 @@
 package ch2;
 
 public class TripDTO {
-	
+
 	private String name;
 	private String location;
 	private String season;
 	private double rating;
-	
-	public TripDTO() {}
 
+	public TripDTO() {}
 
 	public TripDTO(String name, String location, String season, double rating) {
 		this.name = name;
